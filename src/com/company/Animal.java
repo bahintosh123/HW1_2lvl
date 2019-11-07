@@ -1,10 +1,16 @@
 package com.company;
 
-public abstract class Animal {
+import java.awt.*;
+
+public  class Animal {
+    public COLOR getColor() {
+        return color;
+    }
+
     private String name;
     private int age;
-    private enum COLOR {BLACK,WHITE,YELLOW};
-
+    enum COLOR {BLACK,WHITE,YELLOW};
+    COLOR color;
 
     public String getName() {
         return name;
@@ -14,9 +20,10 @@ public abstract class Animal {
         return age;
     }
 
-    public Animal(String name, int age) {
+    public Animal(String name, int age, COLOR color) {
         this.name = name;
         this.age = age;
+        this.color=color;
 
 
 
